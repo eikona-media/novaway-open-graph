@@ -15,7 +15,7 @@ class YamlDriver extends AbstractFileDriver
     /**
      * {@inheritdoc}
      */
-    protected function loadMetadataFromFile(\ReflectionClass $class, $file)
+    protected function loadMetadataFromFile(\ReflectionClass $class, string $file): ?\Metadata\ClassMetadata
     {
         $name = $class->name;
 
@@ -37,7 +37,7 @@ class YamlDriver extends AbstractFileDriver
     /**
      * {@inheritdoc}
      */
-    protected function getExtension()
+    protected function getExtension(): string
     {
         return 'yml';
     }
